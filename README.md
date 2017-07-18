@@ -1,17 +1,81 @@
 #  Predictive tools for Higher Ed cultures where personal & career development are mission-critical
 
-###1. What are we building?
+### 1. What are we building?
 
 This is the MVP of a platform that will deliver the data on the association of social ties with academic and labor/job outcomes.
 
 What you will be building is the social graph of a freshman college class. This exercise is meant to build the shell of the graph, where the 475 students of a freshman class are tied by class associations. What we will be measuring includes:
 
- a) Degree centrality — the number of a node has in a social network
- b) Closeness centrality — the distance of a node to all other nodes in a social network
- c) Betweenness centrality —the number of shortest paths between any two nodes that go through a given node
- d) Eccentricity—the distance between a node and its farthest node in a socialnetwork
+#### Degree centrality — the number of social ties a node has in a social network
+#### Closeness centrality — the distance of a node to all other nodes in a social network
+#### Betweenness centrality —the number of shortest paths between any two nodes that go through a given node
+#### Eccentricity—the distance between a node and its farthest node in a socialnetwork
+
+Details of the files are given below.
+
+### 2. What stack are we using?
+
+#### Database: SQL
+#### Backend: Django
+#### Frontend: React & Redux
+
+### 3. What are the files provided?
+The files provided are all in JSON format.
+
+### freshmanclass.json
+This file provides genereal information on the freshman class. The `credits` indicates the number of credit hours taken. The `DOB` is the birth year for age. `First Gen` indicates whether the student is a first generation college student. `GPA` is the current cumulative GPA. `Home` is the hometown information including a zip code, Town and State. The `Transcript` is the set of courses a student is taking. `Gender` is as given and `index` is a unique identifier.
 
 
-The Stack: the preferred application stack will assume a Django backend whose REST API will be used by React in the front end.
+```json
+{
+    "CLASS2021": [
+        {
+            "Credits": 16, 
+            "DOB": 1999, 
+            "First Gen": "yes", 
+            "GPA": 2.24, 
+            "Home": [
+                "14822", 
+                "Canaseraga", 
+                "NY"
+            ], 
+            "Transcript": [
+                "CRE 119", 
+                "THE 141", 
+                "BOT 115", 
+                "AMS 102"
+            ], 
+            "gender": "male", 
+            "index": "de77d26f-4048-47f9-a8c8-ee2f70612761"
+        }, 
+```
+### freshmenmapping.json
+This file provides you with the data fro essentially a 475 x 475 matrix that provides you with the degree closeness of each freshman in the class. The example below shows that `de77d26f-4048-47f9-a8c8-ee2f70612761` isn't connected to `b463f794-b2d4-4092-a6b1-94c4d5341def` but is `2` times connected to `25b89d42-d83d-41f6-b3e5-110a31e38ae8`.
+```json
+{
+        "mapping": [
+            "de77d26f-4048-47f9-a8c8-ee2f70612761", 
+            "b463f794-b2d4-4092-a6b1-94c4d5341def"
+        ], 
+        "value": 0
+    },
+{
+        "mapping": [
+            "de77d26f-4048-47f9-a8c8-ee2f70612761", 
+            "25b89d42-d83d-41f6-b3e5-110a31e38ae8"
+        ], 
+        "value": 2
+    }, 
 
-The project: The project is to display data
+
+```
+#### HINT: to quickly access this matrix values, you can use `freshmanclass.json` and extract all the index keys and then iterate through the `freshmenmapping.json` file.
+
+### LaplacianCentrality.json
+This file provides you with the calculated laplacian values of each node and its corresponding Laplacian Value
+```json
+{
+        "centrality": 0.004371616654982276, 
+        "node": "c7f15085-1089-4fbd-9c19-8c26e22fa279"
+    },
+```
