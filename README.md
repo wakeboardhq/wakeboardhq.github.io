@@ -106,8 +106,8 @@ Design-wise, feel free to use any source that is licensed / open source. The col
 #### 2A. Private Side
 The private side should be able to display all the student-related data. That is their biodata, as well as clustering around their various centralities (feel free to commit to up to 4 buckets when you do any clustering). You should display the various centralities on different tabs / cards with the following naming: 'THE BETWEENERS', 'THE CLOSENESS', 'THE CENTRALISTS', 'THE REMOVED'.
 For ideas on how to show clustering, please see the following:
-##### [https://bost.ocks.org/mike/miserables/](Adjacency Matrix)
-##### [http://amp.pharm.mssm.edu/clustergrammer/viz_sim_mats/58a492b4a63cb826f0be6476/rc_two_cats.txt](Clustergrammer)
+##### [https://bost.ocks.org/mike/miserables/] (Adjacency Matrix)
+##### [http://amp.pharm.mssm.edu/clustergrammer/viz_sim_mats/58a492b4a63cb826f0be6476/rc_two_cats.txt] (Clustergrammer)
 
 #### 2B. Public Side
-Stick to the adjacency matrix but anonymize the students. Look to sort the students by 1) `Centrality measures` 2) `GPA` 3) `AGE` 4) `NUMBER OF COURSES`
+Stick to the adjacency matrix model. The value you measure shoudl be based on the number of shared courses but anonymize the students. (The file to look at is the `freshmanmapping.json`) Look to sort the students by 1) `Centrality measures` 2) `GPA` 3) `AGE` 4) `NUMBER OF COURSES`
