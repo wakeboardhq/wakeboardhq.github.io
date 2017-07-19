@@ -1,6 +1,6 @@
 #  Predictive tools for Higher Ed cultures that prioritize personal & career development.
 
-### 1. What are we building?
+## 1. What are we building?
 
 This is the MVP of a platform that will deliver the data on the association of social ties with academic and labor/job outcomes.
 
@@ -13,13 +13,13 @@ What you will be building is the social graph of a freshman college class. This 
 
 Details of the files are given below.
 
-### 2. What stack are we using?
+## 2. What stack are we using?
 
 #### Database: SQL
 #### Backend: Django
 #### Frontend: React & Redux
 
-### 3. What are the files provided?
+## 3. What are the files provided?
 The files provided are all in JSON format.
 
 ### freshmanclass.json
@@ -79,3 +79,21 @@ This file provides you with the calculated laplacian values of each node and its
         "node": "c7f15085-1089-4fbd-9c19-8c26e22fa279"
     },
 ```
+
+### BetweennessCentralityMatrix.json
+This file represents the extent to which a student lies on paths between other students. Students with high betweenness may have considerable influence within the network by virtue of their control over information passing between others. They are also the ones whose removal from the network will most disrupt communications between other vertices because they lie on the largest number of paths taken by messages. Each betweenness is affiliated with a unique id `"0264e0f5-f9aa-4a39-865b-32911eeb0185": 183.16906392420418`
+
+### ClosenessCentralityMatrix.json
+Closeness centrality of a student is the reciprocal of the sum of the shortest path distances from one student to all other students. The higher the value, the more central the student is. 
+
+### DegreeCentralityMatrix.json
+The degree centrality for a student is the fraction of student he / she is connected to. The higher, the more exposed the student is to the network. For example, this is a 9% and 13% connection respectively:
+```json
+"f01db5a5-abcf-402b-ba9f-b964dfa869a0": 0.09915611814345991, 
+"f144b744-1184-4917-b859-debc3d9935f7": 0.13080168776371306, 
+```
+
+### EccentricityMatrix.json
+The eccentricity of a student is the maximum distance from the student to all other students.
+
+## 4. The Task
