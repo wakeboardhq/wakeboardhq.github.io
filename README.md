@@ -9,7 +9,7 @@ What you will be building is the social graph of a freshman college class. This 
 #### Degree centrality — the number of social ties a node has in a social network
 #### Closeness centrality — the distance of a node to all other nodes in a social network
 #### Betweenness centrality —the number of shortest paths between any two nodes that go through a given node
-#### Eccentricity—the distance between a node and its farthest node in a socialnetwork
+#### Eccentricity — the distance between a node and its farthest node in a social network
 
 Details of the files are given below.
 
@@ -23,7 +23,7 @@ Details of the files are given below.
 The files provided are all in JSON format.
 
 ### freshmanclass.json
-This file provides genereal information on the freshman class. The `credits` indicates the number of credit hours taken. The `DOB` is the birth year for age. `First Gen` indicates whether the student is a first generation college student. `GPA` is the current cumulative GPA. `Home` is the hometown information including a zip code, Town and State. The `Transcript` is the set of courses a student is taking. `Gender` is as given and `index` is a unique identifier.
+This file provides general information on the freshman class. The `credits` indicates the number of credit hours taken. The `DOB` is the birth year for age. `First Gen` indicates whether the student is a first generation college student. `GPA` is the current cumulative GPA. `Home` is the hometown information including a zip code, Town and State. The `Transcript` is the set of courses a student is taking. `Gender` is as given and `index` is a unique identifier.
 
 
 ```json
@@ -50,7 +50,7 @@ This file provides genereal information on the freshman class. The `credits` ind
         }, 
 ```
 ### freshmenmapping.json
-This file provides you with the data fro essentially a 475 x 475 matrix that provides you with the degree closeness of each freshman in the class. The example below shows that `de77d26f-4048-47f9-a8c8-ee2f70612761` isn't connected to `b463f794-b2d4-4092-a6b1-94c4d5341def` but is `2` times connected to `25b89d42-d83d-41f6-b3e5-110a31e38ae8`.
+This file provides you with the data for essentially a 475 x 475 matrix that provides you with the degree closeness of each freshman in the class. The example below shows that `de77d26f-4048-47f9-a8c8-ee2f70612761` isn't connected to `b463f794-b2d4-4092-a6b1-94c4d5341def` but is `2` times connected to `25b89d42-d83d-41f6-b3e5-110a31e38ae8`.
 ```json
 {
         "mapping": [
@@ -115,4 +115,4 @@ For ideas on how to show clustering, please see the following:
 ##### [http://amp.pharm.mssm.edu/clustergrammer/viz_sim_mats/58a492b4a63cb826f0be6476/rc_two_cats.txt] (Clustergrammer)
 
 #### 2B. Public Side
-Stick to the adjacency matrix model. The value you measure shoudl be based on the number of shared courses but anonymize the students. (The file to look at is the `freshmanmapping.json`) Look to sort the students by 1) `Centrality measures` 2) `GPA` 3) `AGE` 4) `NUMBER OF COURSES`
+Stick to the adjacency matrix model. The value you measure should be based on the number of shared courses but anonymize the students. (The file to look at is the `freshmanmapping.json`) Look to sort the students by 1) `Centrality measures` 2) `GPA` 3) `AGE` 4) `NUMBER OF COURSES`
