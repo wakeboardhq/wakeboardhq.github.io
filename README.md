@@ -100,6 +100,7 @@ The eccentricity of a student is the maximum distance from the student to all ot
 
 ### 1. UI / UX
 Design-wise, feel free to use any source that is licensed / open source. The color scheme to keep in mind is as follows: `E61B59` and `86C5E5` in addition to black and white. Font choice is `Brandon Text` and `Brandon Grotesque`.
+Logos are attached as `Logo_Black.jpg` and `Logo_White.jpg`
 
 ### 2. PERMISSIONS / VIEWS
 
