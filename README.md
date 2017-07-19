@@ -1,4 +1,4 @@
-#  Predictive tools for Higher Ed cultures that prioritize personal & career development.
+#  Modern tools to help Higher Ed create cultures that prioritize personal & career development.
 
 ## 1. What are we building?
 
