@@ -1,4 +1,4 @@
-#  Predictive tools for Higher Ed cultures where personal & career development are mission-critical
+#  Predictive tools for Higher Ed cultures that prioritize personal & career development.
 
 ### 1. What are we building?
 
